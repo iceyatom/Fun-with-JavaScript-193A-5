@@ -21,5 +21,18 @@ function fancifyText() {
 
 function moo() {
     const textArea = document.getElementById("textArea");
-    textArea.value = textArea.value.toUpperCase();
+    let text = textArea.value.toUpperCase();
+    const sentences = text.split(".");
+
+    for (let i = 0; i < sentences.length; i++) {
+        const sentence = sentences[i].trim();
+        const words = sentence.split(" ");
+
+        if (sentence !== "") {
+            words[words.length - 1] = words[words.length - 1] + "-Moo";
+            sentences[i] = words.join(" ");
+        }
+    }
+
+    textArea.value = sentences.join(". ").replace(/\. $/, ".");
 }
