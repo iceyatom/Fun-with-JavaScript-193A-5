@@ -21,9 +21,10 @@
 		<fieldset>
 			<legend>Fancify</legend>
 			<button onclick="bigger()">Bigger!</button>
-			<input type="radio" name="fancify" value="FancyShmancy">
+			<button onclick="moo()">Moo</button>
+			<input type="radio" id="fancy" name="fancify" value="FancyShmancy" onchange="fancifyText()">
 			<label for="fancy">FancyShmancy</label>
-			<input type="radio" name="fancify" value="BoringBetty">
+			<input type="radio" id="boring" name="fancify" value="BoringBetty" onchange="fancifyText()">
 			<label for="boring">BoringBetty</label>
 		</fieldset>
 		
